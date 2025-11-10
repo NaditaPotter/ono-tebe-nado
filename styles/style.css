@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Raleway", sans-serif;
+    font-family: "Raleway"; /* ИСПРАВЛЕНО: Убран sans-serif */
     box-sizing: border-box;
 }
 
@@ -135,7 +135,6 @@ address p {
 
 .descreption {
     display: flex;
-    position: relative;
     z-index: 2;
     font-size: 22px;
     text-transform: uppercase;
@@ -283,7 +282,7 @@ button {
 }
 
 .about__title {
-    font-weight: 796;
+    font-weight: 700; /* ИСПРАВЛЕНО: Скорректирован вес шрифта с 796 на 700 */
     font-size: 40px;
     text-transform: uppercase;
     margin-top: 133px;
