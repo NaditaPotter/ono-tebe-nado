@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Raleway", sans-serif;
+    font-family: "Raleway"; /* ИСПРАВЛЕНО: Убран sans-serif */
     box-sizing: border-box;
 }
 
@@ -253,6 +253,7 @@ button {
 }
 
 .about {
+    /* ОСТАВЛЯЕМ ВАШИ ОРИГИНАЛЬНЫЕ СВОЙСТВА (НЕ МЕНЯЮ РАСПОЛОЖЕНИЕ/РАЗМЕРЫ) */
     padding: 0;
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -272,6 +273,7 @@ button {
     height: 240px;
     border-radius: 50%;
     background-color: #000;
+    /* ОСТАВЛЯЕМ ВАШИ ОРИГИНАЛЬНЫЕ СВОЙСТВА (НЕ МЕНЯЮ РАСПОЛОЖЕНИЕ/РАЗМЕРЫ) */
     margin-left: 47px;
     margin-right: 0;
     margin-top: 50px;
@@ -283,7 +285,8 @@ button {
 }
 
 .about__title {
-    font-weight: 796;
+    /* ИСПРАВЛЕНО: font-weight должен быть 700 (было 796) */
+    font-weight: 700; 
     font-size: 40px;
     text-transform: uppercase;
     margin-top: 133px;
