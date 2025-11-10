@@ -1,29 +1,25 @@
-/* ИСПРАВЛЕНА ОШИБКА 31: Пробел между селектором и { */
 * {
     margin: 0;
     padding: 0;
-    /* ИСПРАВЛЕНА ОШИБКА 70: Удалены альтернативные шрифты */
     font-family: "Raleway", sans-serif;
-    box-sizing: border-box; /* Добавлено для предсказуемой верстки */
+    box-sizing: border-box;
 }
 
-/* ИСПРАВЛЕНЫ ШИРИНА И ЦЕНТРОВКА (для соответствия, если требовалось 1100px) */
 header, main, footer {
-    width: 1100px; /* Вероятнее всего, требуется 1100px */
+    width: 1100px;
     margin: 0 auto;
 }
 
-/* ИСПРАВЛЕН ПОРЯДОК: Сначала @font-face, потом main CSS */
 @font-face {
-    font-family: 'Raleway'; 
+    font-family: 'Raleway';
     src: url('../fonts/Raleway-Regular.woff2') format('woff2');
-    font-weight: 400; /* Используем 400 для Regular */
+    font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Medium'; 
+    font-family: 'Medium';
     src: url('../fonts/Raleway-Bold.woff2') format('woff2');
-    font-weight: 700; /* Используем 700 для Bold */
+    font-weight: 700;
 }
 
 header {
@@ -74,12 +70,14 @@ address {
     font-size: 18px;
     line-height: 24.3px;
     letter-spacing: 0%;
-    width: fit-content; 
+    width: fit-content;
     margin-right: 50px;
 }
+
 address p a, address p {
     color: black;
 }
+
 address p {
     font-family: Raleway;
     font-weight: 400;
@@ -89,14 +87,12 @@ address p {
     letter-spacing: 0%;
 }
 
-/* ВЕСЬ ДАЛЬНЕЙШИЙ КОД: Каждое правило на новой строке, закрывающая скобка на новой строке */
-
 .cover {
-    position: relative; 
+    position: relative;
     background: url('../images/cover.jpg');
     background-size: cover;
     min-height: 500px;
-    padding: 100px 20px; 
+    padding: 100px 20px;
     z-index: 2;
     color: white;
 }
@@ -130,7 +126,7 @@ address p {
 }
 
 .center {
-    text-align: center; 
+    text-align: center;
 }
 
 .right {
@@ -151,9 +147,9 @@ address p {
 }
 
 button {
-    border: 2px solid white; 
+    border: 2px solid white;
     color: white;
-    background: transparent; 
+    background: transparent;
     padding: 12px 32px;
     font-size: 22px;
     text-transform: uppercase;
@@ -162,7 +158,7 @@ button {
 
 .lots h2 {
     font-weight: 700;
-    font-style: normal; 
+    font-style: normal;
     font-size: 40px;
     text-transform: uppercase;
     margin-top: 180px;
@@ -199,107 +195,105 @@ button {
     z-index: 2;
 }
 
+
 .lots article h3 {
     position: absolute;
     text-decoration: underline;
-    color: white; 
-    text-transform: uppercase; 
+    color: white;
+    text-transform: uppercase;
     width: 254px;
-    height: 110px; 
-    top: 48px; 
-    left: 40px; 
-    font-family: Raleway; 
-    font-weight: 700; 
+    height: 110px;
+    top: 48px;
+    left: 40px;
+    font-family: Raleway;
+    font-weight: 700;
     font-size: 22px;
-    line-height: 120%; 
+    line-height: 120%;
 }
 
 .lots article p {
     position: absolute;
     color: white;
     width: 254px;
-    bottom: 48px; 
+    bottom: 48px;
     left: 40px;
     line-height: 120%;
-    font-weight: 400; 
+    font-weight: 400;
     margin: 0;
     font-size: 20px;
 }
 
+
 .lot-1 {
-    background: 
+    background:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('../images/card-lot-01.jpg');
 }
 
 .lot-2 {
-    background: 
+    background:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('../images/card-lot-02.jpg');
 }
 
 .lot-3 {
-    background: 
+    background:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('../images/card-lot-03.jpg');
 }
 
 .lots > a {
     color: black;
-    text-transform: lowercase; 
-    margin: 30px 64px 0; 
+    text-transform: lowercase;
+    margin: 30px 64px 0;
     display: block;
     width: fit-content;
     font-size: 20px;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
-/* ИСПРАВЛЕНЫ СТИЛИ about ДЛЯ ТОЧНОСТИ */
 .about {
     padding: 0;
     display: grid;
-    grid-template-columns: 300px 1fr; 
-    gap: 72px; 
-    margin-top: 155px; 
+    grid-template-columns: 300px 1fr;
+    gap: 72px;
+    margin-top: 155px;
 }
 
 .about__column:last-child {
-    max-width: 693px; 
+    max-width: 693px;
 }
 
 .about__logo {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    width: 240px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
     height: 240px;
     border-radius: 50%;
     background-color: #000;
     margin-left: 47px;
-    margin-right: 0; 
-    /* СКОРРЕКТИРОВАН ОДИН ИЗ ОТСТУПОВ, КОТОРЫЙ МОГ ВЫЗЫВАТЬ ОШИБКУ */
-    margin-top: 50px; 
+    margin-right: 0;
+    margin-top: 50px;
 }
 
 .about__logo-image {
-    width: 148px; 
-    height: 114px; 
+    width: 148px;
+    height: 114px;
 }
 
 .about__title {
-    /* ИСПРАВЛЕНА ОШИБКА: font-weight без px */
-    font-weight: 700; 
+    font-weight: 700;
     font-size: 40px;
     text-transform: uppercase;
-    /* СКОРРЕКТИРОВАНЫ ОТСТУПЫ */
-    margin-top: 133px; 
+    margin-top: 133px;
     margin-bottom: 100px;
 }
 
 .about__text p {
     font-size: 20px;
     line-height: 25px;
-    margin-bottom: 25px; 
+    margin-bottom: 25px;
 }
 
 footer {
@@ -307,10 +301,10 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 50px 0;
     align-self: flex-start;
-    width: 1100px; 
-    height: 180px; 
-    margin: 0 auto; 
-    align-items: center; 
+    width: 1100px;
+    height: 180px;
+    margin: 0 auto;
+    align-items: center;
 }
 
 footer nav ul {
@@ -332,7 +326,7 @@ footer nav li:nth-child(3) a {
 
 footer > ul {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     gap: 48px;
     list-style: none;
     margin-right: 50px;
@@ -340,8 +334,8 @@ footer > ul {
 
 footer > ul a {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
 }
 
 footer > ul img {
