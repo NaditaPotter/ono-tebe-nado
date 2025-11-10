@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Raleway"; 
+    font-family: "Raleway";
     box-sizing: border-box;
 }
 
@@ -55,7 +55,7 @@ a.active {
 }
 
 address {
-    font-family: Raleway;
+    font-style: normal;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
@@ -70,7 +70,7 @@ address p a, address p {
 }
 
 address p {
-    font-family: Raleway;
+    font-style: normal;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
@@ -109,7 +109,7 @@ address p {
     display: block;
     letter-spacing: 0.3em;
     margin: 20px 25px 20px 50px;
-    font-family: Medium;
+    font-style: Bold;
 }
 
 .left {
@@ -195,7 +195,7 @@ button {
     height: 110px;
     top: 48px;
     left: 40px;
-    font-family: Raleway;
+    font-style: normal;
     font-weight: 700;
     font-size: 22px;
     line-height: 120%;
