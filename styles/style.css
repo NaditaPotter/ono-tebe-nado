@@ -253,12 +253,11 @@ button {
 }
 
 .about {
-    /* Исправлены настройки для визуальной точности */
+    padding: 0;
     display: grid;
-    grid-template-columns: 430px 1fr;
+    grid-template-columns: 300px 1fr;
     gap: 72px;
     margin-top: 155px;
-    padding: 180px 50px;
 }
 
 .about__column:last-child {
@@ -273,7 +272,8 @@ button {
     height: 240px;
     border-radius: 50%;
     background-color: #000;
-    margin: auto; /* Центрирует логотип в колонке */
+    margin-left: 47px;
+    margin-right: 0;
     margin-top: 50px;
 }
 
@@ -283,7 +283,7 @@ button {
 }
 
 .about__title {
-    font-weight: 700;
+    font-weight: 796;
     font-size: 40px;
     text-transform: uppercase;
     margin-top: 133px;
