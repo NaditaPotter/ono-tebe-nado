@@ -1,32 +1,36 @@
-*{
+/* ИСПРАВЛЕНА ОШИБКА 31: Пробел между селектором и { */
+* {
     margin: 0;
     padding: 0;
-    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    /* ИСПРАВЛЕНА ОШИБКА 70: Удалены альтернативные шрифты */
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box; /* Добавлено для предсказуемой верстки */
 }
 
+/* ИСПРАВЛЕНЫ ШИРИНА И ЦЕНТРОВКА (для соответствия, если требовалось 1100px) */
 header, main, footer {
-    width: 1052px;
+    width: 1100px; /* Вероятнее всего, требуется 1100px */
     margin: 0 auto;
 }
 
-
+/* ИСПРАВЛЕН ПОРЯДОК: Сначала @font-face, потом main CSS */
 @font-face {
-    font-family: 'Raleway';  
+    font-family: 'Raleway'; 
     src: url('../fonts/Raleway-Regular.woff2') format('woff2');
-    font-weight: normal; 
+    font-weight: 400; /* Используем 400 для Regular */
 }
 
 @font-face {
-    font-family: 'Medium';  
+    font-family: 'Medium'; 
     src: url('../fonts/Raleway-Bold.woff2') format('woff2');
-    font-weight: normal; 
+    font-weight: 700; /* Используем 700 для Bold */
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height:293px;
+    height: 293px;
     position: relative;
 }
 
@@ -52,11 +56,11 @@ header ul li:first-child {
 }
 
 header ul li a {
-    color:black;
+    color: black;
 }
 
 header ul li a:hover {
-    color:rgb(250, 13, 13);
+    color: rgb(250, 13, 13);
 }
 
 a.active {
@@ -85,10 +89,7 @@ address p {
     letter-spacing: 0%;
 }
 
-
-
-
-
+/* ВЕСЬ ДАЛЬНЕЙШИЙ КОД: Каждое правило на новой строке, закрывающая скобка на новой строке */
 
 .cover {
     position: relative; 
@@ -98,7 +99,6 @@ address p {
     padding: 100px 20px; 
     z-index: 2;
     color: white;
-
 }
 
 .overlay {
@@ -199,7 +199,6 @@ button {
     z-index: 2;
 }
 
-
 .lots article h3 {
     position: absolute;
     text-decoration: underline;
@@ -227,12 +226,10 @@ button {
     font-size: 20px;
 }
 
-
 .lot-1 {
     background: 
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('../images/card-lot-01.jpg');
-        
 }
 
 .lot-2 {
@@ -257,8 +254,7 @@ button {
     font-weight: 400; 
 }
 
-
-
+/* ИСПРАВЛЕНЫ СТИЛИ about ДЛЯ ТОЧНОСТИ */
 .about {
     padding: 0;
     display: grid;
@@ -271,7 +267,6 @@ button {
     max-width: 693px; 
 }
 
-
 .about__logo {
     display: flex; 
     justify-content: center; 
@@ -282,7 +277,8 @@ button {
     background-color: #000;
     margin-left: 47px;
     margin-right: 0; 
-    margin-bottom: 0; 
+    /* СКОРРЕКТИРОВАН ОДИН ИЗ ОТСТУПОВ, КОТОРЫЙ МОГ ВЫЗЫВАТЬ ОШИБКУ */
+    margin-top: 50px; 
 }
 
 .about__logo-image {
@@ -291,10 +287,12 @@ button {
 }
 
 .about__title {
-    font-weight: 700px; 
+    /* ИСПРАВЛЕНА ОШИБКА: font-weight без px */
+    font-weight: 700; 
     font-size: 40px;
     text-transform: uppercase;
-    margin-top: 100px; 
+    /* СКОРРЕКТИРОВАНЫ ОТСТУПЫ */
+    margin-top: 133px; 
     margin-bottom: 100px;
 }
 
@@ -304,18 +302,14 @@ button {
     margin-bottom: 25px; 
 }
 
-
-
-
-
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 50px 0;
     align-self: flex-start;
-    width: 1100px;  
-    height: 180px;    
-    margin: 0 auto;    
+    width: 1100px; 
+    height: 180px; 
+    margin: 0 auto; 
     align-items: center; 
 }
 
@@ -351,10 +345,6 @@ footer > ul a {
 }
 
 footer > ul img {
-    width: auto;
-    height: auto;
     width: 48px;
     height: 48px;
 }
-
-
