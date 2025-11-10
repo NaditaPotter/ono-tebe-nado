@@ -79,8 +79,12 @@ address p {
     position: relative;
     background: url('../images/cover.jpg');
     background-size: cover;
-    min-height: 500px;
-    padding: 165px 20px 0; /* Установлен padding-top 165px, чтобы h1 был на 165px от шапки */
+    /* Изменения для блока обложки */
+    width: 1100px; 
+    height: 757px; 
+    min-height: unset; /* Убираем min-height, так как есть фиксированный height */
+    
+    padding: 160px 20px 0; /* Поднял h1 на 5px (было 165px) */
     z-index: 2;
     color: white;
 }
@@ -100,8 +104,8 @@ address p {
     z-index: 2;
     font-size: 100px;
     text-transform: uppercase;
-    margin-top: 0; /* Удаляем лишний отступ сверху */
-    margin-bottom: 106px; /* Отступ 106px до следующего элемента (.descreption) */
+    margin-top: 0;
+    margin-bottom: 106px;
 }
 
 .left, .center, .right {
@@ -129,13 +133,13 @@ address p {
     font-size: 22px;
     text-transform: uppercase;
     word-spacing: 0.9em;
-    position: relative; /* Изменено на relative, чтобы следовать за h1 с отступом 106px */
-    bottom: unset; /* Убираем bottom */
+    position: relative;
+    bottom: unset;
     left: 50px;
     align-items: center;
     width: fit-content;
-    margin-top: 0; /* Отступ задается через margin-bottom у h1 */
-    padding-bottom: 61px; /* Возвращаем padding, чтобы сохранить высоту блока cover */
+    margin-top: 0;
+    padding-bottom: 61px;
 }
 
 button {
@@ -149,7 +153,8 @@ button {
 }
 
 .lots {
-    margin-top: 180px; /* Отступ 180px от футера (main) до секции "Лоты" */
+    margin-top: 180px; /* Отступ 180px от блока обложки */
+    margin-bottom: 120px; /* Отступ 120px до блока "Об аукционе" */
 }
 
 .lots h2 {
@@ -157,7 +162,7 @@ button {
     font-style: normal;
     font-size: 40px;
     text-transform: uppercase;
-    margin-top: 0; /* Убираем лишний отступ */
+    margin-top: 0;
     margin-bottom: 27px;
     width: 121px;
     height: 47px;
@@ -253,7 +258,8 @@ button {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 72px;
-    margin-top: 155px;
+    margin-top: 0; /* Сбрасываем старый отступ, теперь он в .lots margin-bottom */
+    margin-bottom: 180px; /* Отступ 180px до подвала */
 }
 
 .about__column:last-child {
